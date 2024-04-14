@@ -14,7 +14,7 @@ function renderTasks() {
     taskList.innerHTML = '';
     tasks.forEach((task, index) => {
         const li = document.createElement('li');
-        li.innerHTML = `<span class='delete' onclick="deleteTask(${index})">🗑️</span>${task}<span class='edit' onclick="editTask(${index})">📝</span>`;
+        li.innerHTML = `<span class='delete' onclick="deleteTask(${index})">🗑️</span><p>${task}</p><span class='edit' onclick="editTask(${index})">📝</span>`;
         taskList.appendChild(li);
     });
     saveTasks();
